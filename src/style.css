@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Mono&family=Source+Sans+Pro:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Mono', monospace;
+    display: flex;
+    justify-content: center;
+    background-color: #e5e5e5;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+.app {
+    display: flex;
+    width: 414px;
+    background-color: #fff;
+    flex-direction: column;
+    padding: 16px;
+    height: 100%;
+}
+
+.app>section {
+    align-self: center;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
+}
+
+.app>main {
+    margin: auto 0;
+}
+
+.app>footer {
+    display: flex;
+}
+
+.button {
+    flex: 1;
+    text-transform: uppercase;
+    background-color: #fff;
+    font-family: 'PT Mono';
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    padding: 30px 0px;
+}
+
+.button--dark {
+    color: #FFFFFF;
+    background: #000000;
+    border: none;
+    padding: 25px 0px;
+}

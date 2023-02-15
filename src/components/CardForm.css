@@ -1,0 +1,56 @@
+.card-form {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    row-gap: 15px;
+}
+
+.card-form label {
+    display: flex;
+    flex-direction: column;
+    font-family: 'PT Mono';
+    color: #000000CC;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 13px;
+}
+
+.card-form input {
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-family: 'PT Mono';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 16px;
+}
+
+.card-form input:focus {
+    outline: none;
+}
+
+.card-form select {
+    background-color: #fff;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 8px;
+    text-transform: uppercase;
+    font-family: 'PT Mono';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    padding: 16px;
+}
+
+.card-form select:focus {
+    outline: none;
+}
+
+.card-form section {
+    display: flex;
+    column-gap: 32px;
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "0",
+    "name": "Bitcoin Inc",
+    "background": "linear-gradient(248.04deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 99.07%), #FFAE34",
+    "style": "Dark"
+  },
+  {
+    "id": "1",
+    "name": "Ninja Bank",
+    "background": "linear-gradient(248.3deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0) 100%), #222222",
+    "style": "Light"
+  },
+  {
+    "id": "2",
+    "name": "Block Chain Inc",
+    "background": "linear-gradient(248.52deg, rgba(0, 0, 0, 0.15) 1.49%, rgba(0, 0, 0, 0) 100%), #8B58F9",
+    "style": "Light"
+  },
+  {
+    "id": "3",
+    "name": "Evil Corp",
+    "background": "linear-gradient(248.3deg, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0) 100%), #F33355",
+    "style": "Light"
+  }
+]
