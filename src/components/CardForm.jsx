@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useOutletContext } from 'react-router-dom';
+import { useNavigate, useOutletContext } from 'react-router-dom';
 
 import { formatCardNumber, formatDate, formatCCV } from '../helpers/format';
 
@@ -7,6 +7,7 @@ import Vendors from '../assets/vendors.json';
 import './CardForm.css';
 
 function CardForm({ setCard }) {
+  const navigate = useNavigate();
   const { cards, setCards } = useOutletContext();
 
   const [data, setData] = useState({
@@ -33,7 +34,8 @@ function CardForm({ setCard }) {
 
   const submit = (event) => {
     event.preventDefault();
-    setCards([...cards, data]);
+    setCards([...cards, { ...data, id: cards.length }]);
+    navigate('/');
   }
 
   return (
@@ -46,7 +48,7 @@ function CardForm({ setCard }) {
           type="text"
           name="cardNumber"
           pattern="^\d{4} \d{4} \d{4} \d{4}$"
-          title="1234 1234 1234 1234"
+          title="#### #### #### ####"
           maxLength={19}
           required
         />
@@ -59,6 +61,7 @@ function CardForm({ setCard }) {
           onChange={handleChange}
           type="text"
           name="fullName"
+          maxLength={25}
           required
         />
       </label>
@@ -85,7 +88,7 @@ function CardForm({ setCard }) {
             onChange={(event) => handleChange(event, formatCCV)}
             type="text"
             name="ccv"
-            title="Three digit code"
+            title="###"
             pattern="^\d{3}$"
             maxLength={3}
             required

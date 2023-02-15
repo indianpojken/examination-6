@@ -5,17 +5,17 @@ import * as Chip from '../assets/chip';
 import './Card.css';
 
 function Card({ card }) {
-  const [vendor] = Vendors.filter((v) => v.id === card.vendor);
+  const [vendor] = Vendors.filter((v) => v.id === card?.vendor);
   const logo = Logos[vendor?.name?.replaceAll(' ', '')] ?? Logos["BitcoinInc"];
   const chip = Chip[vendor?.style] ?? Chip["Dark"];
 
   const filler = (string, fillerText) => {
-    return string + fillerText.slice(string?.length);
+    return (string ?? "") + fillerText.slice(string?.length);
   }
 
   return (
     <article
-      className={`card ${vendor?.style === "Light" ? "card--light" : ""}`}
+      className={`card${vendor?.style === "Light" ? " card--light" : ""}`}
       style={{ background: vendor?.background }}>
       <header>
         <img src={chip} />
@@ -23,7 +23,7 @@ function Card({ card }) {
       </header>
 
       <p className="card__number">
-        {filler(card.cardNumber, "XXXX XXXX XXXX XXXX")}
+        {filler(card?.cardNumber, "XXXX XXXX XXXX XXXX")}
       </p>
 
       <footer>
@@ -32,7 +32,7 @@ function Card({ card }) {
             Cardholder Name
           </h3>
           <p className="card__information">
-            {card.fullName}
+            {card?.fullName ?? "Firstname Lastname"}
           </p>
         </aside>
         <aside className="align-right">
@@ -40,7 +40,7 @@ function Card({ card }) {
             Valid Thru
           </h3>
           <p className="card__information">
-            {filler(card.validDate, "MM/YY")}
+            {filler(card?.validDate, "MM/YY")}
           </p>
         </aside>
       </footer>
