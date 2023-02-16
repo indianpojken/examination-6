@@ -78,8 +78,8 @@ function CardForm({ setCard }) {
             onChange={(event) => handleChange(event, formatDate)}
             type="text"
             name="validDate"
-            pattern="^\d{2}/\d{2}$"
-            title="DD/MM"
+            pattern="^(0[1-9]|1[0-2])\/\d\d$"
+            title="MM/YY"
             maxLength={5}
             required
           />
