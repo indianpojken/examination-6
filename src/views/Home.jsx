@@ -7,12 +7,12 @@ import { CardStack } from '../components/CardStack';
 
 function Home() {
   const { cards, setCards } = useOutletContext();
-  const [selectedCard, setSelectedCard] = useState(cards[0]?.id ?? 0);
+  const [selectedCard, setSelectedCard] = useState(cards[0]?.id);
 
   const removeCard = () => {
     const data = cards.filter((c) => c.id !== selectedCard);
     setCards(data);
-    setSelectedCard(data[0]?.id ?? 0);
+    setSelectedCard(data[0]?.id);
   }
 
   return (
@@ -20,7 +20,7 @@ function Home() {
       <Top title="E-Wallet" caption="Active Card" />
 
       <section>
-        <Card card={cards.filter((c) => c.id === selectedCard)[0]} />
+        <Card card={cards.find((c) => c.id === selectedCard)} />
       </section>
 
       {cards.length !== 0 &&
@@ -36,6 +36,7 @@ function Home() {
       <main>
         <CardStack
           cards={cards.filter((c) => c.id !== selectedCard)}
+          /* cards={cards} */
           setSelectedCard={setSelectedCard}
         />
       </main>

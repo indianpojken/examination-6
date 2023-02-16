@@ -8,8 +8,8 @@ function CardStack({ cards, setSelectedCard }) {
       {cards.map((card, i) =>
         <article
           className="card-stack__item"
-          key={i}
-          style={{ marginTop: i * (200 / cards.length) }}
+          key={card.id}
+          style={{ marginTop: 40 * i }}
           onClick={() => { setSelectedCard(card.id) }}
         >
           <Card card={card} />

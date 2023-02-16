@@ -34,7 +34,11 @@ function CardForm({ setCard }) {
 
   const submit = (event) => {
     event.preventDefault();
-    setCards([...cards, { ...data, id: cards.length }]);
+
+    setCards([
+      ...cards, { ...data, id: ~~cards.slice(-1)[0]?.id + 1 }
+    ]);
+
     navigate('/');
   }
 

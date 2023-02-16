@@ -25,13 +25,15 @@ body {
 
 .app>section {
     align-self: center;
+}
+
+.app>section .card {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.08);
 }
 
 .app>article {
     align-self: center;
 }
-
 
 .app>main {
     display: flex;
